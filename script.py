@@ -24,54 +24,41 @@ See <i>/help</i> for commands and more details.</b>
 
 
     HELP_MSG = """
-<i>Add me as admin in your group and start filtering :)</i>
+<b>Commands Help</b>
 
+Add me as admin in your group and start filtering :)
 
-<b>Basic Commands;</b>
-
+<b><u>Basic Commands:</u></b>
 /start - Check if I'm alive!
 /help - Command help
 /about - Something about me!
 
+<b><u>Filter Commands:</u></b>
+/add <code>name reply</code>: Add filt.er for name.
+/del <code>name</code>: Delete filter.
+/delall: Delete entire filters (Group Owner Only!).
+/viewfilters: List all filters in chat.
 
-<b>Filter Commands;</b>
+<b><u>Connection Commands:</u></b>
+/connect <code>groupid</code>: Connect your group to my PM. You can also simply use.
+/connect: Only in groups.
+/connections: Manage your connections.
 
-<code>/add name reply</code>  -  Add filter for name
+<b><u>Extras:</u></b>
+/status: Shows current status of your bot (Auth User Only).
+/id: Shows ID information.
+/info: Shows User Information. Use <code>/info</code> as reply to some message for their details!
 
-<code>/del name</code>  -  Delete filter
-
-<code>/delall</code>  -  Delete entire filters (Group Owner Only!)
-
-<code>/viewfilters</code>  -  List all filters in chat
-
-
-<b>Connection Commands;</b>
-
-<code>/connect groupid</code>  -  Connect your group to my PM. You can also simply use,
-<code>/connect</code> in groups.
-
-<code>/connections</code>  -  Manage your connections.
-
-
-<b>Extras;</b>
-
-/status  -  Shows current status of your bot (Auth User Only)
-
-/id  -  Shows ID information
-
-<code>/info userid</code>  -  Shows User Information. Use <code>/info</code> as reply to some message for their details!
-
-
-<b>© @ZauteKm</b>
+<b>© Developed by ❤️ @ZauteKm</b>
 """
 
 
-    ABOUT_MSG = """🤖<b>My Name : Telegram Filter Bot</b>
+    ABOUT_MSG = """🤖<b>My Name: Filter Bot</b>
 
-👨‍💻<b>Creater :</b> @ZauteKm    
+👨‍💻<b>Creator:</b> @ZauteKm    
 
-♻️<b>Language :</b> <code>Python3</code>
+♻️<b>Language:</b> <code>Python3</code>
 
-📜<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
+📜<b>Library:</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
 
 """
