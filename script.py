@@ -34,9 +34,9 @@ Add me as admin in your group and start filtering :)
 /about - Something about me!
 
 <b><u>Filter Commands:</u></b>
-/add <code>name reply</code>: Add filt.er for name.
+/add <code>name reply</code>: Add filter for name.
 /del <code>name</code>: Delete filter.
-/delall: Delete entire filters (Group Owner Only!).
+/delall: Delete all filters (Group Owner Only!).
 /viewfilters: List all filters in chat.
 
 <b><u>Connection Commands:</u></b>
