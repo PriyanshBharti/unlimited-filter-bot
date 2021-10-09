@@ -21,7 +21,7 @@ import heroku3
 import requests
 
 from pyrogram import filters
-from pyrogram import Client as trojanz
+from pyrogram import Client as zautekm
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 if bool(os.environ.get("WEBHOOK", False)):
