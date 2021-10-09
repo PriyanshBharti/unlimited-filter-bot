@@ -70,7 +70,7 @@ An advanced Filter Bot with nearly unlimitted filters!
 
 1. `TG_BOT_TOKEN`  - Get bot token from @BotFather
 2. `API_ID`        - From my.telegram.org
-3. `API_HASH`      - From my.telegram.org (or @UseTGXBot)
+3. `API_HASH`      - From my.telegram.org
 4. `AUTH_USERS`  - ID of users that can use the bot commands. Get from [UseTGidBot](https://telegram.dog/UseTGidBot) by using /id command
 5. `DATABASE_URI`  - Mongo Database URL from https://cloud.mongodb.com/
 6. `DATABASE_NAME`  - Your database name from mongoDB. Default will be 'Cluster0'
