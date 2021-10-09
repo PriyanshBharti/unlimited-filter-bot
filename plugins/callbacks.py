@@ -44,7 +44,14 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔷 Command Help 🔷", callback_data="help_data")
+                    InlineKeyboardButton("🔷 Commands Help 🔷", callback_data="help_data")
+                ],
+                [
+                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
+                    InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect")
+                ],
+                [
+                    InlineKeyboardButton("👨‍💻 Developer @ZauteKm 👨‍💻", url="https://t.me/zautekm"),
                 ]
             ]
         )
@@ -67,6 +74,9 @@ async def cb_handler(client, query):
                 [
                     InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
                     InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect")
+                ],
+                [
+                    InlineKeyboardButton("🏠 Home 🏠", callback_data="start_data"),
                 ]
             ]
         )
