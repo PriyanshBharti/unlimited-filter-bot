@@ -36,7 +36,7 @@ from database.connections_mdb import(
 )
 
 
-@trojanz.on_callback_query()
+@zautekm.on_callback_query()
 async def cb_handler(client, query):
 
     if query.data == "start_data":
@@ -179,8 +179,8 @@ async def cb_handler(client, query):
 
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton(f"{stat}", callback_data=f"{cb}:{group_id}:{title}"),
-                InlineKeyboardButton("DELETE", callback_data=f"deletecb:{group_id}")],
-            [InlineKeyboardButton("BACK", callback_data="backcb")]
+                InlineKeyboardButton("🗑 Delete", callback_data=f"deletecb:{group_id}")],
+            [InlineKeyboardButton("Back 🔙", callback_data="backcb")]
         ])
 
         await query.message.edit_text(
