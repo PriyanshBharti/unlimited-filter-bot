@@ -225,11 +225,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔷 Commands Help 🔷", callback_data="help_data")
-                ],
-                [
-                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect")
+                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
+                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
                 ],
                 [
                     InlineKeyboardButton("👨‍💻 Developer @ZauteKm 👨‍💻", url="https://t.me/zautekm"),
@@ -258,12 +255,8 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🧑‍🔧 How to Deploy?", url="https://youtube.com/ZauteKm"),
-                    InlineKeyboardButton("About Me 👨‍💻", callback_data="about_data")
-                ],
-                [
-                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject")
+                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
+                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
                 ],
                 [
                     InlineKeyboardButton("🏠 Home 🏠", callback_data="start_data"),
@@ -281,10 +274,6 @@ async def about(client, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton(
-                        "🌀 Source Code 🌀", url="https://github.com/ZauteKm/TG-Filter-Bot")
-                ],
                 [
                     InlineKeyboardButton("🔙 Back", callback_data="help_data"),
                     InlineKeyboardButton("Close ❌", callback_data="close_data"),
