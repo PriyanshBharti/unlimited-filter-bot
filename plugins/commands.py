@@ -217,35 +217,6 @@ async def bot_status(client,message):
     )
 
 
-@zautekm.on_message(filters.command('start') & filters.private)
-async def start(client, message):
-    await message.reply_text(
-        text=Script.START_MSG.format(message.from_user.mention),
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
-                ],
-                [
-                    InlineKeyboardButton("🔎 Search Here Series 🔍", switch_inline_query_current_chat = ''),
-                ]
-            ]
-        ),
-        reply_to_message_id=message.message_id
-    )
-    if Config.SAVE_USER == "yes":
-        try:
-            await add_user(
-                str(message.from_user.id),
-                str(message.from_user.username),
-                str(message.from_user.first_name + " " + (message.from_user.last_name or "")),
-                str(message.from_user.dc_id)
-            )
-        except:
-            pass
-
 
 @zautekm.on_message(filters.command('help') & filters.private)
 async def help(client, message):
@@ -257,14 +228,22 @@ async def help(client, message):
                 [
                     InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
                     InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
-                ],
-                [
-                    InlineKeyboardButton("🏠 Home 🏠", callback_data="start_data"),
                 ]
             ]
         ),
         reply_to_message_id=message.message_id
     )
+     if Config.SAVE_USER == "yes":
+        try:
+            await add_user(
+                str(message.from_user.id),
+                str(message.from_user.username),
+                str(message.from_user.first_name + " " + (message.from_user.last_name or "")),
+                str(message.from_user.dc_id)
+            )
+        except:
+            pass
+
 
 
 @zautekm.on_message(filters.command('about') & filters.private)
@@ -275,9 +254,9 @@ async def about(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔙 Back", callback_data="help_data"),
-                    InlineKeyboardButton("Close ❌", callback_data="close_data"),
-                ]                
+                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
+                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
+                ]              
             ]
         ),
         reply_to_message_id=message.message_id
