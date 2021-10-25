@@ -233,7 +233,7 @@ async def help(client, message):
         ),
         reply_to_message_id=message.message_id
     )
-     if Config.SAVE_USER == "yes":
+    if Config.SAVE_USER == "yes":
         try:
             await add_user(
                 str(message.from_user.id),
