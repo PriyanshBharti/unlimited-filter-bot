@@ -16,44 +16,24 @@ class Script(object):
 
     START_MSG = """<b>Hi {},
 
-I'm an advanced filter bot with many capabilities!</b>
-There is no practical limits for my filtering capacity :)
+Kei hi ZoSeries Studio Bot ka ni e.</b>
+A hnuaia Group & Channel te hi Join Rawh :)
 
-<b>See <i>/help</i> for commands and more details.</b>
+<b>Send <i>/help</i> for more details.</b>
 """
 
 
     HELP_MSG = """
-<b>Commands Help</b>
+<b>No one gonna help you 🤣🤣</b>
 
-Add me as admin in your group and start filtering :)
-
-<b><u>Basic Commands:</u></b>
-/start - Check if I'm alive!
-/help - Command help
-/about - Something about me!
-
-<b><u>Filter Commands:</u></b>
-/add <code>name reply</code>: Add filter for name.
-/del <code>name</code>: Delete filter.
-/delall: Delete all filters (Group Owner Only!).
-/viewfilters: List all filters in chat.
-
-<b><u>Connection Commands:</u></b>
-/connect <code>groupid</code>: Connect your group to my PM. You can also simply use.
-/connect: Only in groups.
-/connections: Manage your connections.
-
-<b><u>Extras:</u></b>
-/status: Shows current status of your bot (Auth User Only).
 /id: Shows ID information.
-/info: Shows User Information. Use <code>/info</code> as reply to some message for their details!
+/info: Shows User Information.
 
 <b>© Developed by ❤️ @ZauteKm</b>
 """
 
 
-    ABOUT_MSG = """🤖<b>My Name: Filter Bot</b>
+    ABOUT_MSG = """🤖<b>My Name: ZoSeries Studio</b>
 
 👨‍💻<b>Creator:</b> @ZauteKm    
 
