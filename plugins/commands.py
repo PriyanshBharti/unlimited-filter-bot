@@ -229,7 +229,7 @@ async def start(client, message):
                     InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
                 ],
                 [
-                    InlineKeyboardButton("👨‍💻 Developer @ZauteKm 👨‍💻", url="https://t.me/zautekm"),
+                    InlineKeyboardButton("🔎 Search Here Series 🔍", switch_inline_query_current_chat = ''),
                 ]
             ]
         ),
