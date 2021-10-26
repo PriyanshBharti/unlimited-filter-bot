@@ -29,11 +29,13 @@ A hnuaia Group & Channel te hi Join Rawh :)
 /id: Shows ID information.
 /info: Shows User Information.
 
+How to Get File : <a href='https://t.me/mizotginfotel/37'>Press me 🥰</a> 
+
 <b>© Developed by ❤️ @ZauteKm</b>
 """
 
 
-    ABOUT_MSG = """🤖<b>My Name: ZoSeries Studio</b>
+    ABOUT_MSG = """🤖<b>My Name: ZoSeriesBot</b>
 
 👨‍💻<b>Creator:</b> @ZauteKm    
 
