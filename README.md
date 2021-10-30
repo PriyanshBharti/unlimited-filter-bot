@@ -8,13 +8,13 @@ An advanced Filter Bot with nearly unlimitted filters!
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/ZauteKm/TG-Filter-Bot/stargazers">
-    <img src="https://img.shields.io/github/stars/ZauteKm/TG-Filter-Bot?style=social">
+  <a href="https://github.com/ZauteKm/unlimited-filter-bot/stargazers">
+    <img src="https://img.shields.io/github/stars/ZauteKm/unlimited-filter-bot?style=social">
 
   </a>
   
-  <a href="https://github.com/ZauteKm/TG-Filter-Bot/fork">
-    <img src="https://img.shields.io/github/forks/ZauteKm/TG-Filter-Bot?label=Fork&style=social">
+  <a href="https://github.com/ZauteKm/unlimited-filter-bot/fork">
+    <img src="https://img.shields.io/github/forks/ZauteKm/unlimited-filter-bot?label=Fork&style=social">
 
   </a>  
 </p>
@@ -96,7 +96,7 @@ EG;
 <details><summary>Deploy to Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/ZauteKm/TG-Filter-Bot/tree/master">
+<a href="https://heroku.com/deploy?template=https://github.com/ZauteKm/unlimited-filter-bot/tree/master">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
@@ -107,8 +107,8 @@ EG;
 <br/>
 
 ```sh
-git clone https://github.com/ZauteKm/TG-Filter-Bot
-cd TG-Filter-Bot
+git clone https://github.com/ZauteKm/unlimited-filter-bot
+cd unlimited-filter-bot
 pip3 install -r requirements.txt
 # <Create Variables appropriately>
 python3 bot.py
