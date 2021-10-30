@@ -6,7 +6,7 @@ RUN pip3 install -U pip
 COPY requirements.txt /requirements.txt
 RUN cd /
 RUN pip3 install -U -r requirements.txt
-RUN mkdir /TG-Filter-Bot
-WORKDIR /TG-Filter-Bot
+RUN mkdir /unlimited-filter-bot
+WORKDIR /unlimited-filter-bot
 COPY start.sh /start.sh
 CMD ["/bin/bash", "/start.sh"]
