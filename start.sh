@@ -1,6 +1,6 @@
 echo "Cloning Repo...."
-git clone https://github.com/ZauteKm/TG-Filter-Bot.git /TG-Filter-Bot
-cd /TG-Filter-Bot
+git clone https://github.com/ZauteKm/unlimited-filter-bot.git /unlimited-filter-bot
+cd /unlimited-filter-bot
 pip3 install -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
