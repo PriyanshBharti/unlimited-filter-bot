@@ -15,21 +15,17 @@
 class Script(object):
 
     START_MSG = """<b>Hi {},
+Im a simple bot which is designed and built for adding filters in any group.
 
-I'm an advanced filter bot with many capabilities!</b>
-There is no practical limits for my filtering capacity :)
-
-<b>See <i>/help</i> for commands and more details.</b>
+<b>Hits <i>/help</i> for commands and more Information.</b>
 """
 
 
     HELP_MSG = """
-<b>Commands Help</b>
+<b>What is a filter bot?</b>
+A bot were group admins can set replies for a particular keyword and the bot will automatically send preset replies whenever that keyword enountered in the chat.
 
-Add me as admin in your group and start filtering :)
-
-<b><u>Basic Commands:</u></b>
-
+<b><u>Usual Commands:</u></b>
 /start - Check if I'm alive!
 /help - Command help
 /about - Something about me!
@@ -38,28 +34,44 @@ Add me as admin in your group and start filtering :)
 """
 
     FILTER_MSG = """
-<b><u>Filter Commands:</u></b>
+<b><u>Filters:</u></b>
+Filter is the feature were users can set automated replies for a particular keyword and the bot will respond whenever a keyword is found the message.
 
-/add <code>name reply</code>: Add filter for name.
-/del <code>name</code>: Delete filter.
+<b>NOTE:</b>
+1. bot should have admin privillage in order to reply filters in a chat.
+2. only admins can add filters in a chat.
+3. filters does support all the telegram markdowns, medias and buttons.
+4. alert buttons are also supported with a limit of 64 characters.
+5. there are some easter eggs, try to find it out.
+
+<b>Commands and Usage:</b>
+/add <name reply>: Add filter for name.
+/view: List all filters in chat.
+/del <name>: delete a specific filter (separate keywords with spaces for deleting multiple filters at a time).
 /delall: Delete entire filters (Group Owner Only!).
-/viewfilters: List all filters in chat.
 """
 
     CONNECTION_MSG = """
-<b><u>Connection Commands:</u></b>
+<b><u>Connections:</u></b>
+Used to connect bot to PM which let will you to execute both normal filter related commands and some other sensitive commands right from the PM that will
+reflect in the group which helps you to keep the filter additions and other stuffs private and helps to prevent flooding.
 
-/connect <code>groupid</code>: Connect your group to my PM. You can also simply use.
+<b>NOTE:</b>
+1. Only admins can add a connection.
+2. In a chat you can simply use the /connect for starting a connection and in PM you must specify chat id right after the command.
+
+<b>Commands and Usage:</b>
+/connect <chat id>: Connect your group to my PM. You can also simply use.
 /connect: Only in groups.
-/connections: Manage your connections.
+/disconnect <chat id>: Disconnect from a chat.
+/connections: List all your connections.
 """
 
     EXTRAS_MSG = """
 <b><u>Extras:</u></b>
 
-/status: Shows current status of your bot (Auth User Only).
-/id: Shows ID information.
-/info: Shows User Information. Use <code>/info</code> as reply to some message for their details!
+/id: Get the chat id of a user or the current chat.
+/info: <user id> or <reply to any message>: whois info of a user.
 """
 
     BUTTONS_MSG = """
@@ -73,7 +85,8 @@ Filter supports both url and alert inline buttons, now lets see how to implement
 3. Buttons should be properly formatted as below or else result will be malformed.
 
 <b>URL buttons:</b>
-<code>[Button Text](buttonurl://t.me/example.com)</code>
+<code>[Button 1](buttonurl:https://example.com)</code>
+<code>[Button 2](buttonurl:https://example.com:same)</code>
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:Ahoy, this is an alert!)</code>
