@@ -342,13 +342,13 @@ async def give_filter(client,message):
             reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
 
             if reply_text:
-                reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
+                reply_text = replied.reply_text.replace("\\n", "\n").replace("\\t", "\t")
 
             if btn is not None:
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await message.reply_text(reply_text, disable_web_page_preview=True)
+                            await message.replied.reply_text(reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
                             await message.replied.reply_text(
@@ -364,7 +364,7 @@ async def give_filter(client,message):
                             )
                         else:
                             button = eval(btn) 
-                            await message.reply_cached_media(
+                            await message.replied.reply_cached_media(
                                 fileid,
                                 caption=replied.reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button)
