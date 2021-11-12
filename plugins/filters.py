@@ -333,40 +333,40 @@ async def delallconfirm(client, message):
 @Client.on_message(filters.group & filters.text)
 async def give_filter(client,message):
     group_id = message.chat.id
-    name = message.replied.text
+    name = message.text
 
     keywords = await get_filters(group_id)
     for keyword in reversed(sorted(keywords, key=len)):
         pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
         if re.search(pattern, name, flags=re.IGNORECASE):
-            replied.reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
+            reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
 
             if reply_text:
-                reply_text = replied.reply_text.replace("\\n", "\n").replace("\\t", "\t")
+                reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
 
             if btn is not None:
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await message.replied.reply_text(reply_text, disable_web_page_preview=True)
+                            await message.reply_text(reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                            await message.replied.reply_text(
-                                replied.reply_text,
+                            await message.reply_text(
+                                reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                     else:
                         if btn == "[]":
-                            await message.replied.reply_cached_media(
+                            await message.reply_cached_media(
                                 fileid,
-                                caption=replied.reply_text or ""
+                                caption=reply_text or ""
                             )
                         else:
                             button = eval(btn) 
-                            await message.replied.reply_cached_media(
+                            await message.reply_cached_media(
                                 fileid,
-                                caption=replied.reply_text or "",
+                                caption=reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                 except Exception as e:
