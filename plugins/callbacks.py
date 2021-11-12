@@ -44,11 +44,14 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
+                    InlineKeyboardButton("commands & help", callback_data="help_data")
                 ],
                 [
-                    InlineKeyboardButton("👨‍💻 Developer @ZauteKm 👨‍💻", url="https://t.me/zautekm"),
+                    InlineKeyboardButton("feedback", url="https://t.me/zautebot"),
+                    InlineKeyboardButton("channel", url="https://t.me/JosProjects")
+                ],
+                [
+                    InlineKeyboardButton("developer @zautekm", url="https://t.me/zautekm"),
                 ]
             ]
         )
@@ -65,11 +68,15 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/mizotelegram"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
+                    InlineKeyboardButton("filter", callback_data="filter_data"),
+                    InlineKeyboardButton("connections", callback_data="connections_data")
                 ],
                 [
-                    InlineKeyboardButton("🏠 Home 🏠", callback_data="start_data"),
+                    InlineKeyboardButton("extras", callback_data="extras_data"),
+                    InlineKeyboardButton("about", callback_data="about_data")
+                ],
+                [
+                    InlineKeyboardButton("« back", callback_data="start_data"),
                 ]
             ]
         )
@@ -81,16 +88,87 @@ async def cb_handler(client, query):
         )
         return
 
+    elif query.data == "filter_data":
+        await query.answer()
+        keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("« back", callback_data="help_data"),
+                    InlineKeyboardButton("buttons", callback_data="buttons_data"),
+                ]
+            ]
+        )
+
+        await query.message.edit_text(
+            Script.FILTER_MSG,
+            reply_markup=keyboard,
+            disable_web_page_preview=True
+        )
+        return
+
+
+    elif query.data == "buttons_data":
+        await query.answer()
+        keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("« back", callback_data="help_data"),
+                ]
+            ]
+        )
+
+        await query.message.edit_text(
+            Script.BUTTONS_MSG,
+            reply_markup=keyboard,
+            disable_web_page_preview=True
+        )
+        return
+
+    elif query.data == "connections_data":
+        await query.answer()
+        keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("« back", callback_data="help_data"),
+                ]
+            ]
+        )
+
+        await query.message.edit_text(
+            Script.CONNECTIONS_MSG,
+            reply_markup=keyboard,
+            disable_web_page_preview=True
+        )
+        return
+
+    elif query.data == "extras_data":
+        await query.answer()
+        keyboard = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("« back", callback_data="help_data"),
+                ]
+            ]
+        )
+
+        await query.message.edit_text(
+            Script.EXTRAS_MSG,
+            reply_markup=keyboard,
+            disable_web_page_preview=True
+        )
+        return
+
     elif query.data == "about_data":
         await query.answer()
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔙 Back", callback_data="help_data"),
-                    InlineKeyboardButton("Close ❌", callback_data="close_data"),
+                    InlineKeyboardButton(
+                        "source code", url="https://github.com/zautekm/unlimited-filter-bot")
                 ],
                 [
-                    InlineKeyboardButton("👥 Mizo Infotel Group 💻", url="http://t.me/mizotelegram"),
+                    InlineKeyboardButton("« back", callback_data="help_data"),
+                    InlineKeyboardButton("close ⌫", callback_data="close_data"),
                 ]                
             ]
         )
@@ -269,7 +347,7 @@ async def cb_handler(client, query):
                 title = ttl.title
                 active = await if_active(str(userid), str(groupid))
                 if active:
-                    act = " - ACTIVE"
+                    act = " - Active"
                 else:
                     act = ""
                 buttons.append(
