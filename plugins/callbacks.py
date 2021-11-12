@@ -51,7 +51,7 @@ async def cb_handler(client, query):
                     InlineKeyboardButton("channel", url="https://t.me/JosProjects")
                 ],
                 [
-                    InlineKeyboardButton("⌫ Close the Menu ⌫", callback_data="close_data"),
+                    InlineKeyboardButton("⌦ Close the Menu ⌫", callback_data="close_data"),
                 ]
             ]
         )
