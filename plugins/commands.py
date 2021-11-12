@@ -232,7 +232,7 @@ async def start(client, message):
                     InlineKeyboardButton("channel", url="https://t.me/JosProjects")
                 ],
                 [
-                    InlineKeyboardButton("developer @zautekm", url="https://t.me/zautekm"),
+                    InlineKeyboardButton("⌦ Close the Menu ⌫", callback_data="close_data"),
                 ]
             ]
         ),
@@ -266,7 +266,8 @@ async def help(client, message):
                     InlineKeyboardButton("about", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("« back", callback_data="start_data"),
+                    InlineKeyboardButton("« Back", callback_data="start_data"),
+                    InlineKeyboardButton("Close ⌫", callback_data="close_data"),
                 ]
             ]
         ),
@@ -286,8 +287,8 @@ async def about(client, message):
                         "source code", url="https://github.com/zautekm/unlimited-filter-bot")
                 ],
                 [
-                    InlineKeyboardButton("« back", callback_data="help_data"),
-                    InlineKeyboardButton("close ⌫", callback_data="close_data"),
+                    InlineKeyboardButton("« Back", callback_data="help_data"),
+                    InlineKeyboardButton("Close ⌫", callback_data="close_data"),
                 ]                
             ]
         ),
