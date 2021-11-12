@@ -51,7 +51,7 @@ async def cb_handler(client, query):
                     InlineKeyboardButton("channel", url="https://t.me/JosProjects")
                 ],
                 [
-                    InlineKeyboardButton("developer @zautekm", url="https://t.me/zautekm"),
+                    InlineKeyboardButton("⌫ close the menu ⌫", callback_data="close_data"),
                 ]
             ]
         )
@@ -77,6 +77,7 @@ async def cb_handler(client, query):
                 ],
                 [
                     InlineKeyboardButton("« back", callback_data="start_data"),
+                    InlineKeyboardButton("close ⌫", callback_data="close_dafa"),
                 ]
             ]
         )
@@ -93,8 +94,8 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("« back", callback_data="help_data"),
-                    InlineKeyboardButton("buttons", callback_data="buttons_data"),
+                    InlineKeyboardButton("« Back", callback_data="help_data"),
+                    InlineKeyboardButton("Buttons »", callback_data="buttons_data"),
                 ]
             ]
         )
@@ -112,7 +113,7 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("« back", callback_data="help_data"),
+                    InlineKeyboardButton("« Back", callback_data="filter_data"),
                 ]
             ]
         )
@@ -129,7 +130,7 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("« back", callback_data="help_data"),
+                    InlineKeyboardButton("« Back", callback_data="help_data"),
                 ]
             ]
         )
@@ -146,7 +147,7 @@ async def cb_handler(client, query):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("« back", callback_data="help_data"),
+                    InlineKeyboardButton("« Back", callback_data="help_data"),
                 ]
             ]
         )
