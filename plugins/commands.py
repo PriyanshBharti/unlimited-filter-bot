@@ -217,17 +217,22 @@ async def bot_status(client,message):
     )
 
 
-
-@zautekm.on_message(filters.command('help') & filters.private)
-async def help(client, message):
+@zautekm.on_message(filters.command('start') & filters.private)
+async def start(client, message):
     await message.reply_text(
-        text=Script.HELP_MSG,
+        text=Script.START_MSG.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
+                    InlineKeyboardButton("🔷 Commands Help 🔷", callback_data="help_data")
+                ],
+                [
+                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
+                    InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect")
+                ],
+                [
+                    InlineKeyboardButton("👨‍💻 Developer @ZauteKm 👨‍💻", url="https://t.me/zautekm"),
                 ]
             ]
         ),
@@ -245,6 +250,29 @@ async def help(client, message):
             pass
 
 
+@zautekm.on_message(filters.command('help') & filters.private)
+async def help(client, message):
+    await message.reply_text(
+        text=Script.HELP_MSG,
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("🧑‍🔧 How to Deploy?", url="https://youtube.com/ZauteKm"),
+                    InlineKeyboardButton("About Me 👨‍💻", callback_data="about_data")
+                ],
+                [
+                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
+                    InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject")
+                ],
+                [
+                    InlineKeyboardButton("🏠 Home 🏠", callback_data="start_data"),
+                ]
+            ]
+        ),
+        reply_to_message_id=message.message_id
+    )
+
 
 @zautekm.on_message(filters.command('about') & filters.private)
 async def about(client, message):
@@ -254,9 +282,13 @@ async def about(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🗣️ Group", url="https://t.me/joinchat/prE6ALN6x2hkY2E1"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/mizotginfotel")
-                ]              
+                    InlineKeyboardButton(
+                        "🌀 Source Code 🌀", url="https://github.com/ZauteKm/TG-Filter-Bot")
+                ],
+                [
+                    InlineKeyboardButton("🔙 Back", callback_data="help_data"),
+                    InlineKeyboardButton("Close ❌", callback_data="close_data"),
+                ]                
             ]
         ),
         reply_to_message_id=message.message_id
