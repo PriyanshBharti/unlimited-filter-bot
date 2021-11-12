@@ -333,13 +333,13 @@ async def delallconfirm(client, message):
 @Client.on_message(filters.group & filters.text)
 async def give_filter(client,message):
     group_id = message.chat.id
-    name = message.text
+    name = message.replied.text
 
     keywords = await get_filters(group_id)
     for keyword in reversed(sorted(keywords, key=len)):
         pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
         if re.search(pattern, name, flags=re.IGNORECASE):
-            reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
+            replied.reply_text, btn, alert, fileid = await find_filter(group_id, keyword)
 
             if reply_text:
                 reply_text = replied.reply_text.replace("\\n", "\n").replace("\\t", "\t")
