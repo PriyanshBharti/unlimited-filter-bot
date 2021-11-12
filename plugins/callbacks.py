@@ -51,7 +51,7 @@ async def cb_handler(client, query):
                     InlineKeyboardButton("channel", url="https://t.me/JosProjects")
                 ],
                 [
-                    InlineKeyboardButton("⌫ close the menu ⌫", callback_data="close_data"),
+                    InlineKeyboardButton("⌫ Close the Menu ⌫", callback_data="close_data"),
                 ]
             ]
         )
@@ -76,8 +76,8 @@ async def cb_handler(client, query):
                     InlineKeyboardButton("about", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("« back", callback_data="start_data"),
-                    InlineKeyboardButton("close ⌫", callback_data="close_dafa"),
+                    InlineKeyboardButton("« Back", callback_data="start_data"),
+                    InlineKeyboardButton("Close ⌫", callback_data="close_data"),
                 ]
             ]
         )
@@ -168,8 +168,8 @@ async def cb_handler(client, query):
                         "source code", url="https://github.com/zautekm/unlimited-filter-bot")
                 ],
                 [
-                    InlineKeyboardButton("« back", callback_data="help_data"),
-                    InlineKeyboardButton("close ⌫", callback_data="close_data"),
+                    InlineKeyboardButton("« Back", callback_data="help_data"),
+                    InlineKeyboardButton("Close ⌫", callback_data="close_data"),
                 ]                
             ]
         )
