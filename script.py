@@ -62,6 +62,24 @@ Add me as admin in your group and start filtering :)
 /info: Shows User Information. Use <code>/info</code> as reply to some message for their details!
 """
 
+    BUTTONS_MSG = """
+<b><u>Buttons:</u></b>
+
+Filter supports both url and alert inline buttons, now lets see how to implement it.
+
+<b>NB:</b>
+1. Telegram will not allows you to send buttons without any content, so content is mandatory.
+2. This bot supports buttons with any telegram media type.
+3. Buttons should be properly formatted as below or else result will be malformed.
+
+<b>URL buttons:</b>
+<code>[Button Text](buttonurl://t.me/example.com)</code>
+
+<b>Alert buttons:</b>
+<code>[Button Text](buttonalert:Ahoy, this is an alert!)</code>
+
+* Bot does support buttonurl and buttonalert alias
+"""
 
     ABOUT_MSG = """🤖<b>My Name: Filter Bot</b>
 
