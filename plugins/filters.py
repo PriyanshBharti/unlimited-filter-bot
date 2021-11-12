@@ -351,22 +351,22 @@ async def give_filter(client,message):
                             await message.reply_text(reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                            await message.reply_text(
-                                reply_text,
+                            await message.replied.reply_text(
+                                replied.reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                     else:
                         if btn == "[]":
-                            await message.reply_cached_media(
+                            await message.replied.reply_cached_media(
                                 fileid,
-                                caption=reply_text or ""
+                                caption=replied.reply_text or ""
                             )
                         else:
                             button = eval(btn) 
                             await message.reply_cached_media(
                                 fileid,
-                                caption=reply_text or "",
+                                caption=replied.reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                 except Exception as e:
