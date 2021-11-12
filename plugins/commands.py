@@ -225,14 +225,14 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🔷 Commands Help 🔷", callback_data="help_data")
+                    InlineKeyboardButton("commands & help", callback_data="help_data")
                 ],
                 [
-                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/TGBotsProJect")
+                    InlineKeyboardButton("feedback", url="https://t.me/zautebot"),
+                    InlineKeyboardButton("channel", url="https://t.me/JosProjects")
                 ],
                 [
-                    InlineKeyboardButton("👨‍💻 Developer @ZauteKm 👨‍💻", url="https://t.me/zautekm"),
+                    InlineKeyboardButton("developer @zautekm", url="https://t.me/zautekm"),
                 ]
             ]
         ),
@@ -258,15 +258,15 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🧑‍🔧 How to Deploy?", url="https://youtube.com/ZauteKm"),
-                    InlineKeyboardButton("About Me 👨‍💻", callback_data="about_data")
+                    InlineKeyboardButton("filter", callback_data="filter_data"),
+                    InlineKeyboardButton("connection", callback_data="connection_data")
                 ],
                 [
-                    InlineKeyboardButton("🗣️ Feedback", url="https://t.me/zautebot"),
-                    InlineKeyboardButton("Channel 📢", url="https://t.me/tgbotsproject")
+                    InlineKeyboardButton("extras", callback_data="extras_data"),
+                    InlineKeyboardButton("about", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("🏠 Home 🏠", callback_data="start_data"),
+                    InlineKeyboardButton("« back", callback_data="start_data"),
                 ]
             ]
         ),
@@ -283,11 +283,11 @@ async def about(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌀 Source Code 🌀", url="https://github.com/ZauteKm/TG-Filter-Bot")
+                        "source code", url="https://github.com/zautekm/unlimited-filter-bot")
                 ],
                 [
-                    InlineKeyboardButton("🔙 Back", callback_data="help_data"),
-                    InlineKeyboardButton("Close ❌", callback_data="close_data"),
+                    InlineKeyboardButton("« back", callback_data="help_data"),
+                    InlineKeyboardButton("close ⌫", callback_data="close_data"),
                 ]                
             ]
         ),
