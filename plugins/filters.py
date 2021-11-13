@@ -346,7 +346,7 @@ async def give_filter(client,message):
                 
             if not message.reply_to_message:
                 await message.reply_text(reply_text, disable_web_page_preview=True)
-                else:
+        else:
                 button = eval(btn)
                 await message.reply_text(
                     reply_text,
