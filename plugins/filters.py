@@ -349,6 +349,12 @@ async def give_filter(client,message):
                     if fileid == "None":
                         if btn == "[]":
                             await client.send_message(message.chat.id, reply_text, reply_to_message_id=message.reply_to_message.message_id, disable_web_page_preview=True)
+                            if not message.reply_to_message:
+                                if btn is not None:
+                                    try:
+                                        if fileid == "None":
+                                            if btn == "[]":
+                                                await message.reply_text(reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
                             await client.send_message(
