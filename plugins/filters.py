@@ -346,9 +346,7 @@ async def give_filter(client,message):
                 
             if not message.reply_to_message:
                 await message.reply_text(reply_text, disable_web_page_preview=True)
-            
-            
-            if not message.reply_to_message:
+            else:
                 button = eval(btn)
                 await message.reply_text(
                     reply_text,
@@ -368,6 +366,7 @@ async def give_filter(client,message):
                         caption=reply_text or "",
                         reply_markup=InlineKeyboardMarkup(button)
                     )
+             
 
             if btn is not None:
                 try:
