@@ -352,8 +352,7 @@ async def give_filter(client,message):
                 try:
                     if btn:
                         button = eval(btn)
-                            await client.send_message(
-                                message.chat.id,
+                            await message.reply_text(
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
