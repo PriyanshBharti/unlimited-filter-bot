@@ -45,10 +45,10 @@ Filter is the feature were users can set automated replies for a particular keyw
 5. there are some easter eggs, try to find it out.
 
 <b>Commands and Usage:</b>
-/add 〈name reply〉: Add filter for name.
-/view: List all filters in chat.
-/del 〈name〉: delete a specific filter (separate keywords with spaces for deleting multiple filters at a time).
-/delall: Delete entire filters (Group Owner Only!).
+/add `<name reply>`: add filter for name.
+/view: list all filters in chat.
+/del `<name>`: delete a specific filter (separate keywords with spaces for deleting multiple filters at a time).
+/delall: delete entire filters (Group Owner Only!).
 """
 
     CONNECTIONS_MSG = """
@@ -61,17 +61,17 @@ reflect in the group which helps you to keep the filter additions and other stuf
 2. In a chat you can simply use the /connect for starting a connection and in PM you must specify chat id right after the command.
 
 <b>Commands and Usage:</b>
-/connect 〈chat id〉: Connect your group to my PM. You can also simply use.
-/connect: Only in groups.
-/disconnect 〈chat id〉: Disconnect from a chat.
-/connections: List all your connections.
+/connect `<chat id>`: connect your group to my PM. You can also simply use.
+/connect: only in groups.
+/disconnect `<chat id>`: disconnect from a chat.
+/connections: list all your connections.
 """
 
     EXTRAS_MSG = """
 <b><u>Extras:</u></b>
 
-/id: Get the chat id of a user or the current chat.
-/info: <user id> or <reply to any message>: whois info of a user.
+/id: get the chat id of a user or the current chat.
+/info: `<user id>` or `<reply to any message>`: whois info of a user.
 """
 
     BUTTONS_MSG = """
