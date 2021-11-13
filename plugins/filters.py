@@ -344,69 +344,30 @@ async def give_filter(client,message):
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
                 
-            if not message.reply_to_message:
-                await message.reply_text(
-                    reply_text,
-                    disable_web_page_preview=True
-                )
-                return
-                
-                
-            if not message.reply_to_message:
-                button = eval(btn)
-                await message.reply_text(
-                    reply_text,
-                    disable_web_page_preview=True,
-                    reply_markup=InlineKeyboardMarkup(button)
-                )
-            else:
-                if btn == "[]":
-                    await message.reply_cached_media(
-                        fileid,
-                        caption=reply_text or ""
-                    )
-                else:
-                    button = eval(btn) 
-                    await message.reply_cached_media(
-                        fileid,
-                        caption=reply_text or "",
-                        reply_markup=InlineKeyboardMarkup(button)
-                    )
-                    return
-                            
-                    
-            
-             
-
             if btn is not None:
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(message.chat.id, reply_text, reply_to_message_id=message.reply_to_message.message_id, disable_web_page_preview=True)
+                            await message.reply_text(reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                            await client.send_message(
-                                message.chat.id,
+                            await message.reply_text(
                                 reply_text,
-                                reply_to_message_id=message.reply_to_message.message_id,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                     else:
                         if btn == "[]":
-                            await client.send_cached_media(
+                            await message.reply_cached_media(
                                 message.chat.id,
                                 fileid,
                                 caption=reply_text or "",
-                                reply_to_message_id=message.reply_to_message.message_id
                             )
                         else:
                             button = eval(btn) 
-                            await client.send_cached_media(
-                                message.chat.id,
+                            await message.reply_cached_media(
                                 fileid,
                                 caption=reply_text or "",
-                                reply_to_message_id=message.reply_to_message.message_id,
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
                 except Exception as e:
