@@ -45,9 +45,9 @@ Filter is the feature were users can set automated replies for a particular keyw
 5. there are some easter eggs, try to find it out.
 
 <b>Commands and Usage:</b>
-/add `<name reply>`: add filter for name.
+/add (`name reply`): add filter for name.
 /view: list all filters in chat.
-/del `<name>`: delete a specific filter (separate keywords with spaces for deleting multiple filters at a time).
+/del (`name`): delete a specific filter (separate keywords with spaces for deleting multiple filters at a time).
 /delall: delete entire filters (Group Owner Only!).
 """
 
