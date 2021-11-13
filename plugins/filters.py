@@ -343,7 +343,7 @@ async def give_filter(client,message):
 
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
-                
+
             if btn is not None:
                 try:
                     if fileid == "None":
@@ -359,9 +359,8 @@ async def give_filter(client,message):
                     else:
                         if btn == "[]":
                             await message.reply_cached_media(
-                                message.chat.id,
                                 fileid,
-                                caption=reply_text or "",
+                                caption=reply_text or ""
                             )
                         else:
                             button = eval(btn) 
