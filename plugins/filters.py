@@ -343,6 +343,7 @@ async def give_filter(client,message):
 
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
+                reply_to_message_id=message.message_id
 
             if btn is not None:
                 try:
@@ -353,6 +354,7 @@ async def give_filter(client,message):
                             button = eval(btn)
                             await message.reply_text(
                                 reply_text,
+                                reply_to_message_id=message.message_id,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
