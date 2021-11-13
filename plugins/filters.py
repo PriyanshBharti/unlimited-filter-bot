@@ -345,10 +345,11 @@ async def give_filter(client,message):
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
                 
             if not message.reply_to_message:
-                try:
-                    if fileid == "None":
-                        if btn == "[]":
-                            await message.reply_text(reply_text, disable_web_page_preview=True)
+                await message.reply_text(
+                    reply_text,
+                    disable_web_page_preview=True
+                )
+                return
                         else:
                             button = eval(btn)
                             await message.reply_text(
@@ -369,6 +370,7 @@ async def give_filter(client,message):
                                 caption=reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button)
                             )
+                            
                     
             
              
