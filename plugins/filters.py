@@ -349,6 +349,7 @@ async def give_filter(client,message):
                     reply_text,
                     disable_web_page_preview=True
                 )
+                return
                 
                 
             if not message.reply_to_message:
@@ -371,6 +372,7 @@ async def give_filter(client,message):
                         caption=reply_text or "",
                         reply_markup=InlineKeyboardMarkup(button)
                     )
+                    return
                             
                     
             
